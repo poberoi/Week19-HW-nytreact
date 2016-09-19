@@ -1,0 +1,20 @@
+{
+  "name": "week19-hw-nytreact",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/poberoi/Week19-HW-nytreact.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/poberoi/Week19-HW-nytreact/issues"
+  },
+  "homepage": "https://github.com/poberoi/Week19-HW-nytreact#readme"
+}
