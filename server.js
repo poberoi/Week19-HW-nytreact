@@ -20,6 +20,21 @@ app.use(bodyParser.json({type:'application/vnd.api+json'}));
 
 app.use(express.static('./public'));
 
-// -------------------------------------------------
+
 // MongoDB Configuration (using local until depoloyment)
-mongoose.connect(process.env.MONGOLAB_URI || 'mongodb://localhost/nytarticles')
+mongoose.connect(process.env.MONGOLAB_URI || 'mongodb://localhost/nytarticles');
+
+var db = mongoose.connection;
+
+db.on('error', function(err){
+  console.log('Mongoose Connection Error: ', err);
+});
+
+db.once('open', function(){
+  console.log('Mongoose connection successful.');
+});
+
+app.get('/', function(req, res) {
+  res.send(index.html);
+});
+
