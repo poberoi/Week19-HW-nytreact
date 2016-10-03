@@ -12,8 +12,6 @@ var IndexRoute  = Router.IndexRoute;
 var Main = require('../components/main');
 var Saved = require('../components/children/saved'); 
 var Search = require('../components/children/search'); 
-var Query = require('../components/children/grandchildren/query');
-var Results = require('../components/children/grandchildren/results');
 
 // Export the Routes
 module.exports = (
@@ -21,16 +19,8 @@ module.exports = (
   /*High level component is the Main component*/
   <Route path='/' component={Main}>
 
-    {/* If user selects Child1 then show the appropriate component*/}
-    <Route path='Search' component={Search} >
-
-      {/*Child1 has its own Grandchildren options*/}
-      <Route path='Query' component={Query} />
-      <Route path='Results' component={Results} />
-
-      <IndexRoute component={Query} />
-
-    </Route>
+    {/* If user selects Search then show the appropriate component*/}
+    <Route path='Search' component={Search} />
 
     {/* If user selects Child2 then show the appropriate component*/}
     <Route path='Saved' component={Saved} />
