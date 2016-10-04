@@ -3,8 +3,8 @@ var React = require('react');
 var Router = require('react-router');
 
 // Include the Query and Results componens
-var Query = require('../components/children/grandchildren/query');
-var Results = require('../components/children/grandchildren/results');
+var Query = require('./grandchildren/query');
+var Results = require('./grandchildren/results');
 
 // Include the Helper (for the query)
 var helpers = require('../utils/helpers');
